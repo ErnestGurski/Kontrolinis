@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 
 namespace Ernest
 {
     class Program
     {
-        private const int peomWidth = 48;
+        private const int lenteleWidth = 49;
 
-        private static string[] poem = {   
+        private static string[] Lentel = {   
 @***********************************************@
 @Nr.  |Auto G.NR| Event Y.|   Event M.| Event D.@
 @***********************************************@
@@ -18,26 +18,33 @@ namespace Ernest
 
         private static void PrintStarLine()
         {
-            Console.WriteLine(new String('*', peomWidth));
+            Console.WriteLine(new String('*', lenteleWidth));
         }
 
         private static void PrintTextLeft(string text)
         {
-            Console.WriteLine("* {0, " + ((peomWidth - 4) * -1) + "} *", text);
+            Console.WriteLine(text);
         }
         private static void PrintTextRight(string text)
         {
-            Console.WriteLine("* {0, " + (peomWidth - 4) + "} *", text);
+            Console.WriteLine(text);
         }
 
 
-        private static void PrintPoem()
+        private static void PrintLentele()
         {
             PrintStarLine();
+			
+			PrintTextLeft(Lentel[0]);
+            PrintTextRight(Lentel[1]);
+            PrintTextLeft(Lentel[2]);
+            PrintTextRight(Lentel[3]);
+            PrintTextLeft(Lentel[4]);
+            PrintTextRight(Lentel[5]);
+            PrintTextLeft(Lentel[6]);
+            PrintTextLeft(Lentel[7]);
 
-            PrintStarLine();
-            PrintTextLeft(new String(' ', 5) + "Poet: William Butler Yeats");
-            PrintTextRight("Published: 1899");
+
             PrintStarLine();
         }
 
@@ -55,16 +62,16 @@ namespace Ernest
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Please select program:");
-                Console.WriteLine("1. Print poem");
-                Console.WriteLine("2. Calculate expresion");
+                Console.WriteLine("pasirinkite programa:");
+                Console.WriteLine("1. Lentele");
+                Console.WriteLine("2. Skaiciavimas");
                 Console.WriteLine();
-                Console.WriteLine("To end program enter TERMINATE");
+                Console.WriteLine("Baigti rasykite zodi TERMINATE");
 
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        PrintPoem();
+                        PrintLentele();
                         break;
                     case "2":
                         CalcExpre();
@@ -72,7 +79,7 @@ namespace Ernest
                     case "TERMINATE":
                         return;
                     default:
-                        Console.WriteLine("No such command");
+                        Console.WriteLine("Nera tokios komandos");
                         break;
                 }
                 Console.ReadLine();
