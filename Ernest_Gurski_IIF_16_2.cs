@@ -62,9 +62,9 @@ namespace Ernest
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("pasirinkite programa:");
-                Console.WriteLine("1. Lentele");
-                Console.WriteLine("2. Skaiciavimas");
+                Console.WriteLine("Pasirinkite programa:");
+                Console.WriteLine("1.Lentele");
+                Console.WriteLine("2.Skaiciavimas");
                 Console.WriteLine();
                 Console.WriteLine("Baigti rasykite zodi TERMINATE");
 
